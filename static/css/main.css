@@ -1,131 +1,130 @@
-/* استایل‌های بدنه صفحه */
+/* General Styles */
 body {
-    background: linear-gradient(135deg, #ff4b1f, #1fddff);
-    color: #000000; /* متن‌ها به رنگ مشکی */
-    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #820df5, #4ce6ff); /* Softer background */
+    color: #333; /* Darker text for better contrast */
+    font-family: 'Poppins', sans-serif; /* Modern font */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden; /* Prevent scrollbars on body */
 }
 
-/* استایل‌های کانتینر وظایف */
 #task-container {
-    max-width: 600px;
-    width: 100%;
+    max-width: 500px; /* Slightly smaller container */
+    width: 95%; /* Responsive width */
     margin: 0 auto;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Softer shadow */
     overflow: hidden;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 0.8s ease-in-out; /* Faster animation */
 }
 
-/* استایل‌های فرم وظایف */
+/* Header Styles */
+.header-title {
+    font-size: 2rem; /* Smaller title */
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #673ab7, #512da8); /* Gradient header */
+}
+
+/* Form Styles */
 #form-wrapper {
-    background: #007bff;
-    padding: 20px 30px;
-    border-radius: 15px 15px 0 0;
+    padding: 20px;
+    background: #fff; /* White form background */
+}
+
+.input-group { /* Bootstrap input group */
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-#form-wrapper input[type='text'] {
-    background-color: #ffa500;
-    border: 2px solid #0000ff;
-    border-radius: 10px;
-    color: #000000; /* رنگ متن مشکی */
-    padding: 10px;
-    width: 80%;
-    margin-right: 10px;
-    outline: none;
-    transition: all 0.3s ease;
+#title {
+    border-radius: 5px 0 0 5px; /* Rounded corners on input */
+    border-right: none; /* Remove right border */
+    box-shadow: none; /* Remove default shadow */
+    padding: 12px;
 }
 
-#form-wrapper input[type='text']:focus {
-    border-color: #ffffff;
-}
-
-#submit {
-    background-color: #007bff;
-    border-radius: 10px;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#submit:hover {
-    background-color: #0056b3;
-}
-
-/* استایل‌های وظایف */
-.task-wrapper {
-    padding: 20px 30px;
-    border-bottom: 1px solid #e9e9e9;
+#add-btn {
+    border-radius: 0 5px 5px 0; /* Rounded corners on button */
+    background-color: #673ab7; /* Purple button */
+    border: none;
+    padding: 12px 15px;
     transition: background-color 0.3s ease;
+}
+
+#add-btn:hover {
+    background-color: #512da8; /* Darker purple on hover */
+}
+
+#add-btn i { /* Style the icon */
+    margin: 0; /* Remove default margin */
+}
+
+
+/* Task Styles */
+.task-wrapper {
+    padding: 15px 20px; /* Adjusted padding */
+    border-bottom: 1px solid #eee;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.task-wrapper:last-child { /* Remove bottom border on last task */
+    border-bottom: none;
 }
 
 .task-wrapper:hover {
-    background-color: #f8f8f8;
+    background-color: #f5f5f5;
 }
 
 .task-title {
-    font-size: 18px;
-    color: #000000; /* رنگ متن وظایف مشکی */
+    flex-grow: 1; /* Allow task title to expand */
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
 }
 
 .btn-edit,
 .btn-delete {
-    border-radius: 10px;
-    margin-left: 5px;
-    padding: 10px 15px;
+    border-radius: 5px; /* Rounded buttons */
+    padding: 8px 12px; /* Smaller buttons */
     border: none;
     cursor: pointer;
     color: #fff;
+    transition: all 0.2s ease; /* Smoother transitions */
 }
 
 .btn-edit {
-    background-color: #28a745;
-    transition: background-color 0.3s ease;
+    background-color: #4caf50; /* Green edit button */
 }
 
 .btn-edit:hover {
-    background-color: #218838;
+    background-color: #43a047; /* Darker green on hover */
 }
 
 .btn-delete {
-    background-color: #dc3545;
-    transition: background-color 0.3s ease;
+    background-color: #f44336; /* Red delete button */
 }
 
 .btn-delete:hover {
-    background-color: #c82333;
+    background-color: #d32f2f; /* Darker red on hover */
 }
 
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* استایل‌های عنوان */
-.header-title {
-    font-size: 2.5rem;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    margin: 0;
-    padding: 20px;
-    text-align: center;
 }
