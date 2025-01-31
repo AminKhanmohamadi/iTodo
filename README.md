@@ -1,3 +1,4 @@
+<img src='./logo1.png' alt='logo'  />
 # 🗒️ iTodo
 
 **A simple and effective To-Do List application built with Django, Docker, and Vanilla JavaScript** 📋🚀
