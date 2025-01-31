@@ -1,5 +1,10 @@
+<div align='center'>
+   <img src='./logo1.png' alt='logo' />
+</div>
+
+
 # 🗒️ iTodo
-<img src='./logo1.png' alt='logo' />
+
 **A simple and effective To-Do List application built with Django, Docker, and Vanilla JavaScript** 📋🚀
 
 **Producer:** AminKhanmohamadi  
